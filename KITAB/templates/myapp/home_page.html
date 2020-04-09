@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% extends "myapp/layout.html" %}
+{% block body_block %}
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+  <div class="topnav-message">
+    <h1>  Assalamu Alaikum {{ request.user.get_username.title }}.. </h1>
+  </div>
+  <div class="left-container">
+<h2>About KITAB </h2>
+<p>At Improving Education, we work to improve educational systems by harnessing the creative power of individuals to develop,
+  test, and implement innovative and efficient solutions to complex problems. We focus on birth through grade 3 literacy improvement
+  communities that help schools, parents, teachers, and leaders learn to improve. Our teams design, test, and develop new ways to solve
+  systemic problems through a rigorous quality improvement process.</p>
+
+	<div class="service-pan">
+		<div class="service-img">
+			<img src="{% static 'images/edu.gif' %}" alt="">
+			<h4> Online Classroom </h4>
+		</div>
+		<div class="service-img">
+			<img src="{% static 'images/resume1.gif' %}" alt="">
+			<h4> Resume Builder </h4>
+		</div>
+		<div class="service-img">
+			<img src="{% static 'images/doubt.gif' %}" width="80%" alt="">
+			<h4> Educational Assistance </h4>
+		</div>
+
+	</div>
+
+  </div>
+  <div class="right-container">
+    <h3> Notice</h3>
+    <hr>
+		<table>
+			<tr>
+				<td> General body Meeting 2020-2021</td>
+			</tr>
+				<tr>
+					<td> Madrasa PTA Meeting </td>
+				</tr>
+				<tr>
+					<td> NRC Orientation class </td>
+				</tr>
+				<tr>
+					<td> Student Orientation class </td>
+				</tr>
+				<tr>
+					<td> Masjid Rennovation - April 2020</td>
+				</tr>
+				<tr>
+					<td> Chemnad Jamath commitee election </td>
+				</tr>
+</table>
+<h3> Announcement</h3>
+<hr>
+<table>
+	<tr>
+	<td>Friday Auction - June 2020 </td>
+</tr>
+<tr>
+	<td> Madrasa Ground -Leasing Rules </td>
+</tr>
+</table>
+  </div>
+
+
+{% endblock %}

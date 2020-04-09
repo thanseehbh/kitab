@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends "myapp/layout.html" %}
+{% block body_block %}
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+</head>
+  <div class="topnav-message">
+    <h1> {{ request.user.get_username.title }} 's Profile	 </h1>
+  </div>
+	{% if already_status %}
+  <div class="left-container">
+		<div class="img-pan">
+			<div class="img-box">
+				<img src="{{ user_det.document.url }}" alt="">
+			</div>
+			<div class="img-header">
+			<h1>{{ user_profile.first_name.title }} {{ user_profile.last_name }}</h1>
+			<h4> {{ user_skill.designation.upper }}</h4>
+			<h4> {{ user_skill.company_name.title }}</h4>
+			<h4> {{ user_skill.work_location.title }}</h4>
+			</div>
+		</div>
+
+		<hr id='hrbody'>
+<p>At Improving Education, we work to improve educational systems by harnessing the creative power of individuals to develop,
+  test, and implement innovative and efficient solutions to complex problems. We focus on birth through grade 3 literacy improvement
+  communities that help schools, parents, teachers, and leaders learn to improve. Our teams design, test, and develop new ways to solve
+  systemic problems through a rigorous quality improvement process.</p>
+	<table>
+		<col width="150">
+		<col width="250">
+
+		<tr>
+			<td> <h5> Father Name: </h5> </td>
+			<td>{{ user_profile.father_name }}</td>
+		</tr>
+		<tr>
+			<td> <h5> Mother Name: </h5> </td>
+			<td>{{ user_profile.mother_name }}</td>
+		</tr>
+		<tr>
+			<td> <h5> Highest Qualification: </h5> </td>
+			<td>{{ user_edu.qualification1 }}</td>
+		</tr>
+		<tr>
+			<td> <h5> Graduated From: </h5> </td>
+			<td>{{ user_edu.qual1_college }}</td>
+		</tr>
+		<tr>
+			<td> <h5> Blood Group: </h5> </td>
+			<td>{{ user_profile.blood_group }}</td>
+		</tr>
+
+	</table>
+  </div>
+  <div class="right-container">
+    <h3> Eligible Jobs</h3>
+    <hr>
+		<li> Assistant Manager -Milma</li>
+		<li> IT Operation Mnager - Gail</li>
+		<li> Sorting Assistant - Indian Post</li>
+	</br>
+		<h3> Applied Jobs</h3>
+    <hr>
+		<li> System analyst - Wipro</li>
+		<li> Django Developer - Accenture</li>
+
+  </div>
+{% else %}
+
+<h6> Profile not registered</h6>
+<a href="{% url 'myapp:register' %}"><h6>Click to Register</h6></a>
+
+{% endif %}
+
+{% endblock %}

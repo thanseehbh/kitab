@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% extends "myapp/layout.html" %}
+{% block body_block %}
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reg.css' %}">
+</head>
+	<div class="topnav-message">
+		<h1> Profile Registration </h1>
+	</div>
+<div class="container-reg">
+	{% if already_status %}
+	<h4> Profile already present in system </h4>
+	{% else %}
+	{% if register_status %}
+	<h2> Thank You....</h2>
+	<h2> Your registration completed</h2>
+
+	{% else %}
+
+	<form  method="POST" enctype="multipart/form-data">
+
+        <table>
+			{{ user_form.as_table }}
+			{{ user_details_form.as_table }}
+
+    </table>
+      <div class="column">
+		<table>
+			<hr>
+			<h3> Profile details </h3>
+			{{ user_profile_form.as_table }}
+			<hr>
+
+		</table>
+		<h4>Instructions</h4>
+		<ol>
+			<li>Please provide correct details</li>
+			<li>Please validate your details before submit</li>
+			<li>Only selected fields can edit yoursef, rest please ocntact admin</li>
+			<li>for any support kindly drop support@kitab.com</li>
+		</ol>
+    </div>
+      <div class="column">
+		<table>
+		<hr>
+			<h3 background='black'> Education details </h3>
+			{{ user_edu_form.as_table }}
+			<hr>
+		</table>
+    <table>
+		<hr>
+			<h3> Skill details </h3>
+			<hr>
+			{{ user_skill_form.as_table }}
+		</table>
+      </div>
+			 <input type="hidden" id="custId" name="username" value='{{ request.user.get_username }}'>
+		{% csrf_token %}
+		</br>
+		<button class='registerbtn' type="submit" name="" >Register here</button>
+	</form>
+	{% endif %}
+	{% endif %}
+  </div>
+{% endblock %}

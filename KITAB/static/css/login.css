@@ -1,0 +1,189 @@
+body {
+  background-color: #004445;
+  font-family: Helvetica, Helvetica, Helvetica;
+}
+/* Bordered form */
+form {
+  background: none;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 4px;
+
+}
+
+.label {
+
+  padding: 5px 20px 5px 30px;
+  width: 70%
+}
+
+.form-panel{
+
+}
+
+.form-panel h2 {
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password],input[type=email],input[type=file]{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0 8px 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius:5px;
+}
+
+.topnav-message {
+    background-color: #0f4c75;
+    margin-top: 0px;
+}
+
+.topnav-message h1{
+  color: white;
+  margin-top: 0px;
+  padding: 20px;
+}
+
+
+/* input[type=text], input[type=password],input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 10px;
+  display: inline-block;
+  border: none;
+  } */
+.pmal{
+  font-family: 'Chilanka', cursive;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus,  input[type=file]:focus {
+  background-color: #ddd;
+  outline: .5px solid #2B3EE3;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0 20px 20px;
+  border: none;
+  cursor: pointer;
+  /* padding: 5px 20px 5px 20px; */
+  width: 90%
+}
+
+.button-login {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0 50px 30px;
+  border: none;
+  cursor: pointer;
+  /* padding: 5px 20px 5px 20px; */
+  width: 80%
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+/* .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+/* img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}  */
+
+/* Add padding to containers */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 20px;
+  background-color: #f1f3f4;
+  border: 1px solid white;
+  border-radius: 2%;
+  box-shadow: 0px 4px black;
+
+
+}
+
+.regcontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 20px;
+  background-color: #f1f3f4;
+  border: 1px solid white;
+  border-radius: 2%;
+  box-shadow: 0px 4px black;
+}
+
+.succontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 20px;
+  background-color: #f1f3f4;
+  border: 1px solid white;
+  border-radius: 2%;
+  box-shadow: 0px 4px black;
+  text-align: center;
+  image-orientation: center;
+}
+img {
+  margin: 20px;
+ width: 100px;
+ height:100px;
+ border: 1px solid green;
+}
+
+table{
+
+  width: 100%;
+}
+p {
+  margin-left: 20px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}

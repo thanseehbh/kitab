@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+    <title></title>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="{% url 'myapp:home' %}">Home</a>
+      <a href="{% url 'myapp:profile' %}">My Profile</a>
+      <a href="{% url 'myapp:register' %}">Register</a>
+      <div class="topnav-right">
+        <a id="wname" href="#">Welcome... {{ request.user.get_username.title }} ..</a>
+        <a href="{% url 'myapp:logout' %}">Logout</a>
+      </div>
+    </div>
+
+    <div class="container">
+    			{% block body_block %}
+    			{% endblock %}
+          <div class="navbar-bottom">
+           <p> copyright @Thanseehbeeyech@gmail.com  </p>
+          </div>
+    		</div>
+
+  </body>
+</html>

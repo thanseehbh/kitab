@@ -1,0 +1,135 @@
+* {box-sizing: border-box}
+
+/* Add padding to containers ecfbfc*/
+
+h2, h4 {
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.topnav-message {
+    background-color: #235952;
+    margin-top: 0px;
+}
+
+.topnav-message h1{
+  color: white;
+  margin-top: 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+table {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+/* Clear floats after the columns */
+.row:after {
+  /* content: ""; */
+  /* display: table; */
+  /* clear: both; */
+}
+.container-reg {
+  padding: 25px 25px 25px 25px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border: 1px solid #84a9ac;
+  background-color: white;
+  border-radius:15px;
+  margin-bottom: 25px;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=email],select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 5px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.pmal{
+  font-family: 'Chilanka', cursive;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus,select:focus {
+  background-color: #ddd;
+  outline: .5px solid #2B3EE3;
+}
+
+h3 {
+  background-color: #2c786c;
+  font-size: 20px;
+  width:98%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  /* border: 2px solid #00a8cc; */
+  padding: 5px;
+}
+
+select {
+  padding: 8px 16px;
+  background: #f1f1f1;
+  display: inline-block;
+
+}
+
+input[type=date],input[type=month] {
+  padding: 8px 16px;
+  background: #f1f1f1;
+
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #21bf73;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+  border: none;
+}
+
+p, li {
+  margin: 0px;
+  padding: 25px;
+  color: #323232;
+  font-size: 15px;
+  text-align: center;
+  font-family: cursive;
+}
